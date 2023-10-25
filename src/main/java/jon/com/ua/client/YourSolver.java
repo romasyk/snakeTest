@@ -26,32 +26,39 @@ public class YourSolver implements Solver<Board> {
 
     @Override
     public String get(Board board) {
+
+
         if (board.isGameOver()) {
             return Direction.UP.toString();
         }
-        computePaths(createMatrix(board)[board.getHead().getX()][board.getHead().getY()]);
 
-Point p = getShortestPathTo(createMatrix(board)[board.getApples().get(0).getX()][board.getApples().get(0).getY()]).get(0).point;
-double y = p.getY();
-double x = p.getX();
-
-        if (board.getHead().getX() == x && board.getHead().getY() < y) {
-            return Direction.UP.toString();
-        } else if (board.getHead().getX() > x && board.getHead().getY() == y) {
-            return Direction.LEFT.toString();
-        } else if (board.getHead().getX() < x && board.getHead().getY() == y) {
-            return Direction.RIGHT.toString();
-        } else if (board.getHead().getX() == x && board.getHead().getY() > y) {
-            return Direction.DOWN.toString();
-        }
-
-        return NearestEmpty.getDirection(board, path);
+        return getWay(board);
     }
 
 
 
 
+public String getWay(Board board){
 
+    computePaths(createMatrix(board)[board.getHead().getX()][board.getHead().getY()]);
+    Point p = getShortestPathTo(createMatrix(board)[board.getApples().get(0).getX()][board.getApples().get(0).getY()]).get(0).point;
+
+    double y = p.getY();
+    double x = p.getX();
+
+    String direction = Direction.UP.toString();
+
+    if (board.getHead().getX() == x && board.getHead().getY() < y) {
+        direction= Direction.UP.toString();
+    } else if (board.getHead().getX() > x && board.getHead().getY() == y) {
+        direction= Direction.LEFT.toString();
+    } else if (board.getHead().getX() < x && board.getHead().getY() == y) {
+        direction= Direction.RIGHT.toString();
+    } else if (board.getHead().getX() == x && board.getHead().getY() > y) {
+        direction= Direction.DOWN.toString();
+    }
+    return direction;
+}
 
 
 
