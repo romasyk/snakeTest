@@ -90,72 +90,73 @@ public class YourSolver implements Solver<Board> {
                 if (isCollision(headX, headY + 1, board)&& isCollision(headX , headY+ 2, board)
                         && isCollision(headX +1, headY+ 1, board)
                         && isCollision(headX +1, headY+2, board)) {
-                    availableDirections.add(Direction.UP.toString());
+                    return Direction.UP.toString();
                 }
 
                 if (isCollision(headX, headY - 1, board) && isCollision(headX, headY-2, board)
                         && isCollision(headX -1, headY-1, board)
                         && isCollision(headX - 1, headY-2, board)) {
-                    availableDirections.add(Direction.DOWN.toString());
+                    return Direction.DOWN.toString();
                 }
 
                 if (isCollision(headX - 1, headY, board)&& isCollision(headX - 2, headY, board)
                         && isCollision(headX - 1, headY-1, board)
                         && isCollision(headX - 2, headY-1, board)) {
-                    availableDirections.add(Direction.LEFT.toString());
+                    return Direction.LEFT.toString();
                 }
 
                 if (isCollision(headX + 1, headY, board) && isCollision(headX + 2, headY, board)
                         && isCollision(headX + 2 , headY+1, board)
                         && isCollision(headX + 1 , headY+1, board)) {
-                    availableDirections.add(Direction.RIGHT.toString());
+                    return Direction.RIGHT.toString();
                 }
+
 
 
                 if (isCollision(headX, headY + 1, board)&& isCollision(headX , headY+ 2, board)
                         && isCollision(headX -1, headY+ 1, board)
                         && isCollision(headX -1, headY+2, board)) {
-                    availableDirections.add(Direction.UP.toString());
+                    return Direction.UP.toString();
                 }
 
                 if (isCollision(headX, headY - 1, board) && isCollision(headX, headY-2, board)
                         && isCollision(headX +1, headY-1, board)
                         && isCollision(headX + 1, headY-2, board)) {
-                    availableDirections.add(Direction.DOWN.toString());
+                    return Direction.DOWN.toString();
                 }
 
                 if (isCollision(headX - 1, headY, board)&& isCollision(headX - 2, headY, board)
                         && isCollision(headX - 1, headY+1, board)
                         && isCollision(headX - 2, headY+1, board)) {
-                    availableDirections.add(Direction.LEFT.toString());
+                    return Direction.LEFT.toString();
                 }
 
                 if (isCollision(headX + 1, headY, board) && isCollision(headX + 2, headY, board)
                         && isCollision(headX + 2 , headY-1, board)
                         && isCollision(headX + 1 , headY-1, board)) {
-                    availableDirections.add(Direction.RIGHT.toString());
+                    return Direction.RIGHT.toString();
                 }
 
 
 
                 if (isCollision(headX, headY + 1, board)&& isCollision(headX , headY+ 2, board)
                         && isCollision(headX , headY+ 3, board)) {
-                    availableDirections.add(Direction.UP.toString());
+                    return Direction.UP.toString();
                 }
 
                 if (isCollision(headX, headY - 1, board) && isCollision(headX, headY-2, board)
                         && isCollision(headX, headY-3, board)) {
-                    availableDirections.add(Direction.DOWN.toString());
+                    return Direction.DOWN.toString();
                 }
 
                 if (isCollision(headX - 1, headY, board)&& isCollision(headX - 2, headY, board)
                         && isCollision(headX - 3, headY, board)) {
-                    availableDirections.add(Direction.LEFT.toString());
+                    return Direction.LEFT.toString();
                 }
 
                 if (isCollision(headX + 1, headY, board) && isCollision(headX + 2, headY, board)
                         && isCollision(headX + 3 , headY, board)) {
-                    availableDirections.add(Direction.RIGHT.toString());
+                    return Direction.RIGHT.toString();
                 }
 
 
@@ -163,64 +164,61 @@ public class YourSolver implements Solver<Board> {
 
                 if (isCollision(headX, headY + 1, board)&& isCollision(headX , headY+ 2, board)
                         && isCollision(headX +1, headY+ 2, board)) {
-                    availableDirections.add(Direction.UP.toString());
+                    return Direction.UP.toString();
                 }
 
                 if (isCollision(headX, headY - 1, board) && isCollision(headX, headY-2, board)
                         && isCollision(headX-1, headY-2, board)) {
-                    availableDirections.add(Direction.DOWN.toString());
+                    return Direction.DOWN.toString();
                 }
 
                 if (isCollision(headX - 1, headY, board)&& isCollision(headX - 2, headY, board)
                         && isCollision(headX -2 , headY-1, board)) {
-                    availableDirections.add(Direction.LEFT.toString());
+                    return  Direction.LEFT.toString();
                 }
 
                 if (isCollision(headX + 1, headY, board) && isCollision(headX + 2, headY, board)
                         && isCollision(headX +2 , headY+1, board)) {
-                    availableDirections.add(Direction.RIGHT.toString());
+                    return Direction.RIGHT.toString();
                 }
 
 
 
 
                 if (isCollision(headX, headY + 1, board)&& isCollision(headX , headY+ 2, board)) {
-                    availableDirections.add(Direction.UP.toString());
+                    return Direction.UP.toString();
                 }
 
                 if (isCollision(headX, headY - 1, board) && isCollision(headX, headY-2, board)) {
-                    availableDirections.add(Direction.DOWN.toString());
+                    return Direction.DOWN.toString();
                 }
 
                 if (isCollision(headX - 1, headY, board)&& isCollision(headX - 2, headY, board)) {
-                    availableDirections.add(Direction.LEFT.toString());
+                    return Direction.LEFT.toString();
                 }
 
                 if (isCollision(headX + 1, headY, board) && isCollision(headX + 2, headY, board) ) {
-                    availableDirections.add(Direction.RIGHT.toString());
+                    return Direction.RIGHT.toString();
                 }
 
 
 
                 if (isCollision(headX, headY + 1, board)) {
-                    availableDirections.add(Direction.UP.toString());
+                 return Direction.UP.toString();
                 }
 
                 if (isCollision(headX, headY - 1, board) ) {
-                    availableDirections.add(Direction.DOWN.toString());
+                    return  Direction.DOWN.toString();
                 }
 
                 if (isCollision(headX - 1, headY, board)) {
-                    availableDirections.add(Direction.LEFT.toString());
+                    return  Direction.LEFT.toString();
                 }
 
                 if (isCollision(headX + 1, headY, board) ) {
-                    availableDirections.add(Direction.RIGHT.toString());
+                    return Direction.RIGHT.toString();
                 }
 
-                if (!availableDirections.isEmpty()) {
-                    return availableDirections.get(0);
-                }
             }
         }
 
